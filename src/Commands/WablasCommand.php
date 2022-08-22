@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ZarulIzham\Wablas\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class WablasCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-wablas';
 
     public $description = 'My command';
 

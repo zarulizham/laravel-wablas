@@ -17,9 +17,8 @@ class WablasServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-wablas')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-wablas_table')
+            ->hasConfigFile('wablas')
+            // ->hasMigration('create_laravel-wablas_table')
             ->hasCommand(WablasCommand::class);
     }
 }

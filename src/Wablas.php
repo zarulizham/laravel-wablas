@@ -20,7 +20,7 @@ class Wablas
 
     public function getDeviceInfo()
     {
-        $url = $this->url . "/api/device/info?token=" . $this->token;
+        $url = $this->url.'/api/device/info?token='.$this->token;
         $response = Http::get($url);
 
         return new DeviceInfo((array) $response->object());
@@ -28,7 +28,7 @@ class Wablas
 
     public function sendMessage($phone, $message)
     {
-        $url = $this->url . "/api/send-message";
+        $url = $this->url.'/api/send-message';
 
         $response = Http::withoutVerifying()
             ->withHeaders([
@@ -40,6 +40,8 @@ class Wablas
                 'message' => $message,
                 'spintax' => true,
             ]);
+
+        return $response->body();
 
         return new SendMessage((array) $response->object());
     }

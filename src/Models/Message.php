@@ -11,6 +11,8 @@ class Message extends DataTransferObject
     public $phone;
 
     public $message;
+
     public $status;
+
     public $ref_id;
 }
